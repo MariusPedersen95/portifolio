@@ -8,8 +8,18 @@ module.exports = {
     parser: '@babel/eslint-parser',
     requireConfigFile: false,
   },
-  extends: ['@nuxtjs', 'plugin:nuxt/recommended', 'prettier'],
-  plugins: [],
+  extends: [
+    '@nuxtjs',
+    'plugin:nuxt/recommended',
+    'prettier',
+    // 'eslint-config-prettier',
+  ],
+  plugins: ['prettier'],
   // add your custom rules here
-  rules: {},
+  rules: {
+    semi: ['error', 'never'],
+    'prettier/prettier': ['error', { singleQuote: true, semi: false }],
+    'no-unused-vars': 'warn',
+    'no-empty': 'warn',
+  },
 }
