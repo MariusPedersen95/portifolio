@@ -18,13 +18,15 @@ export default {
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [
-      { 
-        rel: 'icon', 
-        type: 'image/x-icon', 
-        href: '/favicon.ico' },
-      { 
-        rel: 'preconnect', 
-        href: 'https://fonts.googleapis.com' },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico',
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
@@ -34,14 +36,11 @@ export default {
         href: 'https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100;0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300&display=swap',
         rel: 'stylesheet',
       },
-  
-  ],
+    ],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [
-    '~/assets/scss/import.scss'
-  ],
+  css: ['~/assets/scss/import.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
