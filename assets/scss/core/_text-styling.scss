@@ -1,0 +1,146 @@
+* {
+    font-size: 16px;
+    font-size: var(--default-font-size);
+    word-spacing: 1px;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+  
+    line-height: 1.618;
+    line-height: var(--default-line-height);
+    font-family: 'Archivo', sans-serif;
+    color: #F2F2F2;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 0 0 1.5rem 0;
+    font-weight: 700;
+    width: 100%;
+  }
+  strong {
+    font-weight: 600;
+    font-size: inherit;
+    &.small {
+      font-weight: 600;
+      font-size: 1.1rem;
+    }
+  }
+  .semi-strong {
+    font-weight: 500;
+  }
+  .italic {
+    font-family: 'Archivo', sans-serif;
+    font-style: italic;
+  }
+  em,
+  u,
+  a,
+  del {
+    font-size: inherit;
+  }
+  
+  p {
+    font-size: 1.2rem;
+    margin: 0 0 1.5rem 0;
+    font-weight: 400;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.2rem;
+    }
+    &.small {
+      font-size: 1.1rem;
+    }
+    &.medium {
+      font-size: 1.3rem;
+    }
+    &.large {
+      font-size: 1.5rem;
+    }
+  }
+  
+  .li-large {
+    font-size: 1.5rem;
+    margin: 1.5rem 0;
+    font-weight: 400;
+  }
+  
+  li {
+    font-size: 1.2rem;
+    margin: 0 0 1rem 0;
+    font-weight: 400;
+  }
+  
+  h1 {
+    font-size: 1.85rem;
+    @include media-breakpoint-up(sm) {
+      font-size: 2.2rem;
+    }
+    @include media-breakpoint-up(lg) {
+      font-size: 3rem;
+    }
+  }
+  h2 {
+    font-size: 1.8rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 2.8rem;
+    }
+  }
+  h3 {
+    font-size: 1.6rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 2rem;
+    }
+  }
+  h4 {
+    font-size: 1.2rem;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.4rem;
+    }
+  }
+  
+  span {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  .large-text {
+    font-size: 1.62rem;
+  }
+  
+  a:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+  .underline {
+    color: inherit;
+    text-decoration: none;
+    border-bottom: solid 1px;
+  }
+  
+  .text-alignment {
+    &-center {
+      text-align: center;
+    }
+    &-left {
+      text-align: left;
+    }
+    &-right {
+      text-align: right;
+    }
+  }
+  .line-height-08 {
+    line-height: 0.8;
+  }
+  .line-height-104 {
+    line-height: 1.4;
+  }
+  
+  a {
+    color:inherit;
+  }
+  
