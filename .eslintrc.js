@@ -21,5 +21,8 @@ module.exports = {
     'prettier/prettier': ['error', { singleQuote: true, semi: false }],
     'no-unused-vars': 'warn',
     'no-empty': 'warn',
+    "vue/multi-word-component-names": ["error", {
+      "ignores": []
+    }]
   },
 }
