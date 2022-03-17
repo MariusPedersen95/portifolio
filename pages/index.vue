@@ -1,5 +1,7 @@
 <template>
-  <Tutorial />
+  <div class="container">
+    <HeroImage />
+  </div>
 </template>
 
 <script>
