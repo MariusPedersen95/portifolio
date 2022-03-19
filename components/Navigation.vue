@@ -6,8 +6,20 @@
       </div>
       <div class="header-right-nav">
         <div class="nav">
-          <a class="nav-link" href="">Linkedin</a>
-          <a class="nav-link" href="">Github</a>
+          <a
+            class="nav-link"
+            href="https://www.linkedin.com/in/marius-pedersen-997024156/"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Linkedin</a
+          >
+          <a
+            class="nav-link"
+            href="https://github.com/MariusPedersen95"
+            target="_blank"
+            rel="noopener noreferrer"
+            >Github</a
+          >
           <span class="nav-link">Contact</span>
         </div>
       </div>
@@ -55,7 +67,6 @@ header {
   display: flex;
   align-items: center;
   position: relative;
-  width: 100%;
 }
 
 .nav {
@@ -72,6 +83,7 @@ header {
   padding: 0px 21px;
   font-size: 20px;
   font-weight: 300;
+  text-decoration: none;
 }
 .header-container {
   display: flex;
@@ -93,7 +105,7 @@ header {
   50%,
   80%,
   100% {
-    transform: translateY(-70%);
+    transform: translateY(-72%);
   }
   70% {
     transform: translateY(0%);
