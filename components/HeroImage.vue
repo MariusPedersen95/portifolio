@@ -1,5 +1,5 @@
 <template>
-  <section class="section center">
+  <section class="section hero-image section--restrict section--protect-text">
     <h1 class="hero">
       Marius Pedersen <span class="dark">is a</span><br />
       <span class="dark">Norwegian</span> Frontend developer<br />
@@ -74,11 +74,6 @@ export default {
   color: #191c24;
   position: relative;
   z-index: 999;
-}
-
-.center {
-  align-items: center;
-  height: 100vh;
 }
 
 #draggable-container {
