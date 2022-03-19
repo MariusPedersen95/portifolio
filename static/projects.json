@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "TV 2",
+        "logo": "assets/logo/tv2.png",
+        "description": "Beskrivende tekst om hva man har gjort for de."
+    },
+    {
+        "id": 1,
+        "title": "Bas kommunikasjon",
+        "logo": "assets/logo/bas.png",
+        "description": "Beskrivende tekst om hva man har gjort for de."
+    },
+    {
+        "id": 1,
+        "title": "Varner",
+        "logo": "assets/logo/Varner.png",
+        "description": "Beskrivende tekst om hva man har gjort for de."
+    },
+    {
+        "id": 1,
+        "title": "Gjensidige",
+        "logo": "assets/logo/Gjensidige.png",
+        "description": "Beskrivende tekst om hva man har gjort for de."
+    }
+]
