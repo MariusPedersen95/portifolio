@@ -7,6 +7,9 @@
     --max-page-width-alt: 1100px;
     --page-gutter: 1.5rem;
     --page-spacing: 1rem;
+    --c-white: #f2f2f2;
+    --c-black: #191C24;
+    --width: 25px;
     
   }
   
@@ -22,7 +25,7 @@
   
   body {
     overflow-x: hidden;
-    background-color: #191C24;
+    background-color: var(--c-black);
   }
   div {
     font-size: inherit;
