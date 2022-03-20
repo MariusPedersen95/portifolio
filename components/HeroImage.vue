@@ -73,7 +73,7 @@ export default {
 .dark {
   color: #191c24;
   position: relative;
-  z-index: 999;
+  z-index: 10;
 }
 
 .center {
@@ -91,6 +91,7 @@ export default {
   border-radius: 50%;
   top: 387px;
   left: -62px;
+  cursor: grab;
 }
 
 #draggable-header {
