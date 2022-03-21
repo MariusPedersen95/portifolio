@@ -1,26 +1,26 @@
 [
     {
         "id": 1,
-        "title": "TV 2",
-        "logo": "assets/logo/tv2.png",
-        "description": "Beskrivende tekst om hva man har gjort for de."
-    },
-    {
-        "id": 1,
         "title": "Bas kommunikasjon",
         "logo": "assets/logo/bas.png",
         "description": "Beskrivende tekst om hva man har gjort for de."
     },
     {
-        "id": 1,
-        "title": "Varner",
-        "logo": "assets/logo/Varner.png",
+        "id": 2,
+        "title": "TV 2",
+        "logo": "assets/logo/tv2.png",
         "description": "Beskrivende tekst om hva man har gjort for de."
     },
     {
-        "id": 1,
+        "id": 3,
+        "title": "Varner",
+        "logo": "assets/logo/varner.png",
+        "description": "Beskrivende tekst om hva man har gjort for de."
+    },
+    {
+        "id": 4,
         "title": "Gjensidige",
-        "logo": "assets/logo/Gjensidige.png",
+        "logo": "assets/logo/gjensidige.png",
         "description": "Beskrivende tekst om hva man har gjort for de."
     }
 ]
