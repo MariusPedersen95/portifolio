@@ -88,6 +88,12 @@
     &--none-mb {
       margin-bottom: 0;
     }
+    &--none-pb {
+      padding-bottom: 0;
+    }
+    &--none-pt {
+      padding-top: 0;
+    }
     &--full-width {
       padding: 2rem 0 !important;
       @include media-breakpoint-up(md) {
@@ -149,6 +155,14 @@
     flex-wrap: wrap;
     @include media-breakpoint-up(md) {
       justify-content: space-around;
+    }
+  }
+  .space-evenly {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    @include media-breakpoint-up(md) {
+      justify-content: space-evenly;
     }
   }
   .flex-center {
