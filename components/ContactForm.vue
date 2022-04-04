@@ -1,23 +1,38 @@
 <template>
-  <form method="post" class="checkout-form">
+  <form method="post" class="checkout-form" @submit.prevent="sendMail()">
     <div class="one-whole">
       <div class="inner one-whole">
         <div class="floating-label-group one-whole">
           <input
+            v-model="email"
             class="one-whole"
             type="email"
             pattern="^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
             name="email"
+            placeholder=""
             required
           />
           <label class="floating-label">Your email</label>
         </div>
         <div class="floating-label-group one-whole">
-          <input class="one-whole" type="text" name="lastname" required />
+          <input
+            v-model="emne"
+            class="one-whole"
+            type="text"
+            name="Emne"
+            placeholder=""
+            required
+          />
           <label class="floating-label">Emne</label>
         </div>
         <div class="floating-label-group one-whole">
-          <textarea class="one-whole" type="text" name="address" required />
+          <textarea
+            v-model="message"
+            class="one-whole"
+            type="text"
+            name="Message"
+            required
+          />
           <label class="floating-label">Message</label>
         </div>
       </div>
@@ -25,6 +40,27 @@
     <input type="submit" value="Submit" />
   </form>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      email: '',
+      emne: '',
+      message: '',
+    }
+  },
+  methods: {
+    sendMail() {
+      this.$axios.$post('/mail/send', {
+        from: this.email,
+        subject: this.emne,
+        text: this.message,
+      })
+    },
+  },
+}
+</script>
 
 <style lang="scss">
 input,
@@ -45,17 +81,24 @@ textarea {
   font-size: 1.2em;
 }
 input[type='submit'] {
-  background: var(--c-white);
+  height: 60px;
+  padding: 0px 56px 0px 40px;
   background-color: var(--c-white);
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
+  background-image: url('./static/sumbit-arrow.svg');
+  background-size: 20px 20px;
+  background-position: 123px 50%;
+  background-repeat: no-repeat;
+  -webkit-transition: all 200ms ease;
+  transition: all 200ms ease;
   color: var(--c-black);
-  font-size: 1.4rem;
-  text-decoration: none;
-  margin-top: 1.5rem !important;
+  font-size: 1.4em;
+  line-height: 40px;
+  font-weight: 600;
+  margin: 10px auto;
   display: block;
-  margin: 0 auto;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
 }
 
 input[type='submit']:hover,
@@ -64,6 +107,11 @@ input[type='submit']:active {
   background: var(--c-yellow);
   background-color: var(--c-yellow);
   color: var(--c-black);
+  background-image: url('./static/sumbit-arrow.svg');
+  background-size: 20px 20px;
+  background-repeat: no-repeat;
+  background-position: 128px 50%;
+  transform: scale(1.04);
 }
 .floating-label-group {
   position: relative;
@@ -77,12 +125,32 @@ input[type='submit']:active {
     transition: all 0.1s ease;
     padding: 13px 19px 13px 19px;
   }
+  //   input:focus ~ .floating-label,
+  //   input:not(:focus):valid ~ .floating-label {
+  //     display: inline-block;
+  //     top: -0.8em;
+  //     font-size: 0.9em;
+  //     left: 1em;
+  //     background: var(--c-black) none repeat scroll 0% 0%;
+  //     padding: 0px 0.5em;
+  //     color: var(--c-yellow);
+  //   }
+  //   textarea:focus ~ .floating-label,
+  //   textarea:not(:focus):valid ~ .floating-label {
+  //     display: inline-block;
+  //     top: -0.8em;
+  //     font-size: 0.9em;
+  //     left: 1em;
+  //     background: var(--c-black) none repeat scroll 0% 0%;
+  //     padding: 0px 0.5em;
+  //     color: var(--c-yellow);
+  //   }
+
   input:focus ~ .floating-label,
+  input:not(:focus):valid ~ .floating-label,
+  input:not(:placeholder-shown) ~ .floating-label,
   textarea:focus ~ .floating-label,
-  input:not(:focus):valid
-    ~ .floating-label
-    textarea:not(:focus):valid
-    ~ .floating-label {
+  textarea:not(:focus):valid ~ .floating-label {
     display: inline-block;
     top: -0.8em;
     // font-size: 0.9em;
