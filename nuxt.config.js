@@ -21,7 +21,7 @@ export default {
       {
         rel: 'icon',
         type: 'image/x-icon',
-        href: '/favicon.png',
+        href: '/favicon-border.png',
       },
       {
         rel: 'preconnect',
@@ -40,7 +40,7 @@ export default {
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['~/assets/scss/import.scss'],
+  // css: ['~/assets/scss/import.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -52,10 +52,36 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/style-resources',
   ],
+  styleResources: {
+    scss: [
+      './assets/scss/import.scss',
+      // './assets/abstracts/_mixins.scss' // use underscore "_" & also file extension ".scss"
+    ],
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: [],
+  modules: [
+    '@nuxtjs/axios',
+    [
+      'nuxt-mail',
+      {
+        message: {
+          to: process.env.MAIL_TO,
+        },
+        smtp: {
+          host: 'smtp.gmail.com',
+          port: 587,
+          // secure: true,
+          auth: {
+            user: process.env.MAIL_USER,
+            pass: process.env.MAIL_PASSWORD,
+          },
+        },
+      },
+    ],
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {},
