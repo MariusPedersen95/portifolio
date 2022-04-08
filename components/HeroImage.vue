@@ -3,7 +3,7 @@
     <h1 class="hero">
       Marius Pedersen <span class="dark">is a</span><br />
       <span class="dark">Norwegian</span> Frontend developer<br />
-      <span class="dark">with more then</span> three+ yeas of<br />
+      <span class="dark">with more then</span> three+ years of<br />
       experience.
     </h1>
     <div
