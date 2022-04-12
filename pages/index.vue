@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <HeroImage />
+    <section id="skills" class="section">
+      <Skills />
+    </section>
     <section id="projects" class="section">
       <ProjectCard
         v-for="project in projects"
@@ -11,7 +14,7 @@
         :description="project.description"
       />
     </section>
-    <section class="section">
+    <section id="contact" class="section">
       <div class="two-thirds center">
         <ContactForm />
       </div>

@@ -21,7 +21,9 @@
               rel="noopener noreferrer"
               >Github</a
             >
-            <span class="nav-link">Contact</span>
+            <span class="nav-link" @click="goToByScroll('contact')"
+              >Contact</span
+            >
           </div>
           <div class="shellHeader__burgerButton" :class="{ hidde: !mobileNav }">
             <button
@@ -56,7 +58,9 @@
               rel="noopener noreferrer"
               >Github</a
             >
-            <span class="nav-link">Contact</span>
+            <span class="nav-link" @click="goToByScroll('contact')"
+              >Contact</span
+            >
           </div>
         </div>
       </div>
@@ -89,6 +93,13 @@ export default {
       } else {
         this.mobileNav = true
       }
+    },
+    goToByScroll(elementId) {
+      const element = document.getElementById(elementId)
+      element.scrollIntoView({
+        block: 'start',
+        behavior: 'smooth',
+      })
     },
   },
 }
@@ -218,6 +229,9 @@ button {
 
 .shellMenu__navigation {
   margin-top: 20%;
+  a:hover {
+    border-bottom: 2px solid var(--c-white);
+  }
 }
 
 .nav-link {
