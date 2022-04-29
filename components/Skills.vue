@@ -8,10 +8,9 @@
       </div>
       <div class="one-half">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit
-          dui volutpat donec adipiscing porttitor. Risus sed vulputate velit
-          convallis vel malesuada nisl lectus. Et integer nunc nulla vitae at
-          lectus nisl nulla quis.
+          Marius Pedersen frontend developer located in Oslo, Norway. I have a
+          bachlor's deegre in computer science I really like making good looking
+          frontend apps. For the record I watch a lot of sports.
         </p>
       </div>
     </div>
@@ -22,7 +21,7 @@
         </div>
       </div>
       <div class="one-half">
-        <p>HTML, vue, css osv. Craft, contentfuel.</p>
+        <p>JavaScript, Vue, HTML, CSS, Craft.</p>
       </div>
     </div>
     <div class="one-whole flex mt3">
