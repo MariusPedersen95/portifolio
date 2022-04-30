@@ -1,9 +1,9 @@
 <template>
   <div>
     <transition name="bounce" appear>
-      <header :class="show ? 'active' : ''">
+      <header>
         <div class="header-logo">
-          <nuxt-link to="/">Marius Pedersen</nuxt-link>
+          <p>Marius Pedersen</p>
         </div>
         <div class="header-right-nav">
           <div class="nav" :class="{ hidde: mobileNav }">
@@ -21,15 +21,10 @@
               rel="noopener noreferrer"
               >Github</a
             >
-            <span class="nav-link" @click="goToByScroll('contact')"
-              >Contact</span
-            >
+            <a class="nav-link" @click="goToByScroll('contact')">Contact</a>
           </div>
           <div class="shellHeader__burgerButton" :class="{ hidde: !mobileNav }">
-            <button
-              class="burgerMenu"
-              @click="mobileNavActive = !mobileNavActive"
-            >
+            <button class="burgerMenu" @click="mobileNavShow = !mobileNavShow">
               <div class="burgerMenu__overflow">
                 <span class="burgerMenu__1"></span>
                 <span class="burgerMenu__2"></span>
@@ -40,7 +35,7 @@
         </div>
       </header>
     </transition>
-    <template v-if="mobileNavActive">
+    <template v-if="mobileNavShow">
       <div class="shellMenu">
         <div class="shellMenu__container">
           <div class="shellNavigation shellMenu__navigation">
@@ -72,14 +67,21 @@
 export default {
   data() {
     return {
-      show: false,
       mobileNav: false,
-      mobileNavActive: false,
+      mobileNavShow: false,
+      windowWidth: window.innerWidth,
     }
   },
   mounted() {
-    this.show = true
     window.addEventListener('scroll', this.onScroll)
+    window.onresize = () => {
+      this.windowWidth = window.innerWidth
+      if (this.windowWidth <= 850) {
+        this.mobileNav = true
+      } else {
+        this.mobileNav = false
+      }
+    }
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll)
@@ -88,10 +90,10 @@ export default {
     onScroll() {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
-      if (currentScrollPosition <= 15) {
-        this.mobileNav = false
-      } else {
+      if (currentScrollPosition <= 15 && this.windowWidth < 850) {
         this.mobileNav = true
+      } else {
+        this.mobileNav = false
       }
     },
     goToByScroll(elementId) {
@@ -106,8 +108,13 @@ export default {
 </script>
 
 <style lang="scss">
+.header-logo {
+  p {
+    font-size: 1.25rem;
+    font-weight: 300;
+  }
+}
 header {
-  transform: translateY(-70%);
   left: 0px;
   top: 0px;
   overflow-y: hidden;
@@ -117,10 +124,6 @@ header {
   align-items: center;
   padding: 26px;
   z-index: 15;
-}
-
-.active {
-  transform: translate(0px);
 }
 
 .header-right-nav {
@@ -134,6 +137,9 @@ header {
   position: absolute;
   display: flex;
   right: 0px;
+  a:hover {
+    text-decoration: underline;
+  }
 }
 .shellHeader__burgerButton {
   position: absolute;
@@ -239,10 +245,11 @@ button {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  padding: 0px 21px;
-  font-size: 20px;
+  margin: 0px 21px;
+  font-size: 1.25rem;
   font-weight: 300;
   text-decoration: none;
+  cursor: pointer;
 }
 .header-container {
   display: flex;
@@ -252,40 +259,23 @@ button {
 }
 
 .bounce-enter-active {
-  animation: bounce-in 1s ease;
+  animation: fadeAndShow 3s ease;
 }
 
-/* .bounce2 {
-  animation: bounce2 2s ease infinite;
-} */
-@keyframes bounce-in {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(-70%);
+@keyframes fadeAndShow {
+  0% {
+    opacity: 0;
   }
+  40% {
+    opacity: 20%;
+  }
+
   70% {
-    transform: translateY(0%);
+    opacity: 60%;
   }
-  80% {
-    transform: translateY(-5%);
-  }
+
   90% {
-    transform: translateY(0%);
-  }
-  95% {
-    transform: translateY(-5%);
-  }
-  97% {
-    transform: translateY(0%);
-  }
-  99% {
-    transform: translateY(-4%);
-  }
-  100% {
-    transform: translateY(0);
+    opacity: 100%;
   }
 }
 </style>
