@@ -76,7 +76,7 @@ export default {
     window.addEventListener('scroll', this.onScroll)
     window.onresize = () => {
       this.windowWidth = window.innerWidth
-      if (this.windowWidth <= 850) {
+      if (this.windowWidth < 850) {
         this.mobileNav = true
       } else {
         this.mobileNav = false
@@ -90,7 +90,7 @@ export default {
     onScroll() {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
-      if (currentScrollPosition <= 15 && this.windowWidth < 850) {
+      if (currentScrollPosition >= 15 || this.windowWidth < 850) {
         this.mobileNav = true
       } else {
         this.mobileNav = false
