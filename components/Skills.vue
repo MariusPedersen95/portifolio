@@ -27,7 +27,7 @@
     <div class="one-whole flex mt3">
       <div class="one-half">
         <div class="one-third center">
-          <p class="">About Marius</p>
+          <p class="">Experience</p>
         </div>
       </div>
       <div class="one-half">
