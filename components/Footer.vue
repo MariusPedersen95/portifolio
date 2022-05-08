@@ -1,11 +1,11 @@
 <template>
   <footer class="section section--none-mb section--none-pb section--none-pt">
-    <div class="one-whole footer-container">
-      <div class="one-whole pt-40">
-        <div class="two-thirds">
-          <p>© Marius Pedersen 2022</p>
-        </div>
-        <div class="one-third space-evenly">
+    <div class="one-whole footer-container flex pt-40">
+      <div class="two-thirds">
+        <p>© 2022 Marius Pedersen</p>
+      </div>
+      <div class="one-third">
+        <div class="footer-links center">
           <a
             class=""
             href="https://www.linkedin.com/in/marius-pedersen-997024156/"
@@ -32,7 +32,20 @@
 }
 
 .footer-container {
-  border-top: 3px solid var(--c-white);
+  border-top: 1px solid var(--c-white);
+}
+
+.footer-links {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  a + a {
+    margin-left: 3rem;
+  }
+  @include media-breakpoint-up(sm) {
+    justify-content: flex-end;
+    width: 50%;
+  }
 }
 .margin-tp {
   margin-top: 1.5em;
@@ -41,5 +54,13 @@
 .pt-40 {
   padding: 40px 0 50px 0;
   display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+  }
+
+  p {
+    font-size: 1em;
+  }
 }
 </style>
