@@ -53,9 +53,7 @@
               rel="noopener noreferrer"
               >Github</a
             >
-            <span class="nav-link" @click="goToByScroll('contact')"
-              >Contact</span
-            >
+            <a class="nav-link" @click="goToByScroll('contact')">Contact</a>
           </div>
         </div>
       </div>
@@ -90,7 +88,11 @@ export default {
     onScroll() {
       const currentScrollPosition =
         window.pageYOffset || document.documentElement.scrollTop
-      if (currentScrollPosition >= 15 || this.windowWidth < 850) {
+      if (
+        currentScrollPosition >= 15 ||
+        this.windowWidth < 850 ||
+        this.mobileNavShow === true
+      ) {
         this.mobileNav = true
       } else {
         this.mobileNav = false
@@ -238,6 +240,11 @@ button {
   a:hover {
     border-bottom: 2px solid var(--c-white);
   }
+  .nav-link {
+    font-size: 2rem;
+    border-bottom: 2px solid transparent;
+    margin: 1rem 0 1rem 0;
+  }
 }
 
 .nav-link {
@@ -253,8 +260,6 @@ button {
 }
 .header-container {
   display: flex;
-  /* justify-content: flex-end; */
-  /* justify-content: space-evenly; */
   right: 0px;
 }
 
