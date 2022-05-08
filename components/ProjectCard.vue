@@ -1,12 +1,20 @@
 <template>
-  <div class="one-half">
+  <div class="one-half mb-40">
     <div class="img-container bg-black">
       <img :src="require(`~/assets/logo/${logo}`)" alt="test" />
     </div>
-    <div class="one-whole flex">
-      <div class="one-third">{{ id }}</div>
-      <div class="one-third">{{ title }}</div>
-      <div class="one-third">{{ description }}</div>
+    <div class="one-whole flex mt-21">
+      <div class="number-container">
+        <p>{{ id }}</p>
+      </div>
+      <div class="text-container">
+        <p>{{ title }}</p>
+      </div>
+      <div class="text-container">
+        <p>
+          {{ description }}
+        </p>
+      </div>
     </div>
   </div>
 </template>
@@ -36,6 +44,29 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.number-container {
+  display: flex;
+  width: 15%;
+}
+.text-container {
+  display: flex;
+  width: 47.5%;
+}
+.mt-21 {
+  margin-top: 21px;
+}
+.mb-40 {
+  margin-bottom: 50px;
+}
+.card-number {
+  font-size: 1.25rem;
+}
+.card-title {
+  font-size: 1.25rem;
+}
+.card-description {
+  font-size: 1.25rem;
+}
 .bg-black {
   background-color: #18141f;
   box-shadow: 7px 7px 4px rgba(0, 0, 0, 0.25);
@@ -54,6 +85,6 @@ export default {
 .img-container:after {
   content: '';
   display: block;
-  padding-bottom: 100%;
+  padding-bottom: 65%;
 }
 </style>

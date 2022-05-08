@@ -159,9 +159,9 @@
     }
   }
   .space-evenly {
-    width: 100%;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     @include media-breakpoint-up(md) {
       justify-content: space-evenly;
     }

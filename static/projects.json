@@ -3,19 +3,19 @@
         "id": 1,
         "title": "Bas kommunikasjon",
         "logo": "bas.png",
-        "description": "Beskrivende tekst om hva man har gjort for de."
+        "description": "Developed frontend and backend for bas.no togheter with a collegue. Vue,craft."
     },
     {
         "id": 2,
         "title": "TV 2",
         "logo": "tv2.png",
-        "description": "Beskrivende tekst om hva man har gjort for de."
+        "description": "Developed custom email template and implemented it into their crm system"
     },
     {
         "id": 3,
         "title": "Varner",
         "logo": "varner.png",
-        "description": "Beskrivende tekst om hva man har gjort for de."
+        "description": "Developed email templates for Junkyard, Bikbok, Carlings, Cubus, Dressmann and Volt."
     },
     {
         "id": 4,

@@ -1,11 +1,11 @@
-.mobile-only {
+.mobileonly {
     display: block;
     @include media-breakpoint-up(md) {
       display: none;
     }
 }
 
-.desktop-only {
+.desktoponly {
     display: none;
     @include media-breakpoint-up(md) {
       display: block;
