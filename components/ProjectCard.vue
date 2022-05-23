@@ -1,7 +1,7 @@
 <template>
   <div class="one-half mb-40">
     <div class="img-container">
-      <img :src="require(`~/assets/logo/${logo}`)" alt="test" />
+      <img :src="require(`~/assets/logo/${logo}`)" :alt="title" />
     </div>
     <div class="one-whole flex mt-21">
       <div class="number-container">
