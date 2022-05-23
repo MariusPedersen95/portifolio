@@ -125,26 +125,6 @@ input[type='submit']:active {
     transition: all 0.1s ease;
     padding: 13px 19px 13px 19px;
   }
-  //   input:focus ~ .floating-label,
-  //   input:not(:focus):valid ~ .floating-label {
-  //     display: inline-block;
-  //     top: -0.8em;
-  //     font-size: 0.9em;
-  //     left: 1em;
-  //     background: var(--c-black) none repeat scroll 0% 0%;
-  //     padding: 0px 0.5em;
-  //     color: var(--c-yellow);
-  //   }
-  //   textarea:focus ~ .floating-label,
-  //   textarea:not(:focus):valid ~ .floating-label {
-  //     display: inline-block;
-  //     top: -0.8em;
-  //     font-size: 0.9em;
-  //     left: 1em;
-  //     background: var(--c-black) none repeat scroll 0% 0%;
-  //     padding: 0px 0.5em;
-  //     color: var(--c-yellow);
-  //   }
 
   input:focus ~ .floating-label,
   input:not(:focus):valid ~ .floating-label,
@@ -171,6 +151,9 @@ input[type='submit']:active {
   }
 }
 .checkout-form {
+  width: 80%;
+  margin: auto;
+
   .ml {
     margin-left: 1.5em;
   }
