@@ -19,8 +19,8 @@
     },
     {
         "id": 4,
-        "title": "Gjensidige",
-        "logo": "gjensidige.png",
-        "description": "Beskrivende tekst om hva man har gjort for de."
+        "title": "Dialogkonferansen",
+        "logo": "dialogkonferansen.png",
+        "description": "Further development and maintenance of the conference website and mobile app."
     }
 ]
