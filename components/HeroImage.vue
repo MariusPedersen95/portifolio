@@ -9,6 +9,7 @@
     <div
       id="draggable-container"
       ref="draggableContainer"
+      class="desktoponly"
       @mousedown="dragMouseDown"
     >
       <div id="draggable-header" @mousedown="dragMouseDown"></div>
@@ -62,18 +63,26 @@ export default {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
 .hero {
   color: #f2f2f2;
-  font-size: 90px;
+  font-size: 75px;
   font-weight: 400;
-  line-height: 100px;
+  line-height: 85px;
+  @include media-breakpoint-up(md) {
+    font-size: 90px;
+    line-height: 100px;
+  }
 }
 
 .dark {
   color: #191c24;
   position: relative;
   z-index: 10;
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: inline;
+  }
 }
 
 .center {
