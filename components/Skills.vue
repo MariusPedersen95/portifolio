@@ -32,16 +32,14 @@
       </div>
       <div class="one-half">
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit
-          dui volutpat donec adipiscing porttitor. Risus sed vulputate velit
-          convallis vel malesuada nisl lectus. Et integer nunc nulla vitae at
-          lectus nisl nulla quis.
+          I work as a frontend lead in Bas Kommunikasjon. I have been involved
+          in developing a number of websites, most of them written in vue /
+          nuxt, but also been cases with React. On a daily basis, I further
+          develop the company's website and CMS (craft).
         </p>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur sit
-          dui volutpat donec adipiscing porttitor. Risus sed vulputate velit
-          convallis vel malesuada nisl lectus. Et integer nunc nulla vitae at
-          lectus nisl nulla quis.
+          I also have daily contact with customers and mentoring 2 junior
+          frontend developers in vue and email template building.
         </p>
       </div>
     </div>
