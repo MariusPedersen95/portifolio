@@ -80,6 +80,7 @@ export default {
         this.mobileNav = false
       }
     }
+    this.windowWidth < 850 ? (this.mobileNav = true) : (this.mobileNav = false)
   },
   beforeDestroy() {
     window.removeEventListener('scroll', this.onScroll)

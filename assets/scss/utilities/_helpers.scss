@@ -1,19 +1,19 @@
 .mobileonly {
-    display: block;
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
+  display: block;
+  @include media-breakpoint-up(md) {
+    display: none;
+  }
 }
 
 .desktoponly {
-    display: none;
-    @include media-breakpoint-up(md) {
-      display: block;
-    }
+  display: none;
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
 }
 
 .hidde {
-    display: none !important;
+  display: none;
 }
 
 .flex {
